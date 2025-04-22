@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  font-family: "Gelasio", serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+/* Header Responsivo */
+header {
+  height: auto;
+  min-height: 6rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #000;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #6a558a;
+  transition: ease-in-out .3s;
+}
+
+nav a:last-child:hover {
+  background-color: white;
+}
+
+.contact-btn {
+  background-color: #6a558a;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  padding: 8rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('MyLogoMockup\ 1.png') center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: white;
+  max-width: 650px;
+  margin-bottom: 1rem;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  
+  display: inline-block;
+  background: #6a558a;
+  color: white;
+  
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+  border-radius: 8px;
+}
+
+/* Showcase Section */
+.showcase {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.showcase h2 {
+  padding: 2rem;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  display: block;
+}
+
+.showcase h2::before {
+  content: '';
+  height: 2px;
+  width: 30%;
+  margin-right: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.showcase h2::after {
+  content: '';
+  height: 2px;
+  width: 30%;
+  margin-left: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* My Work Section */
+.my-work {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.my-work h2 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* Steps Section */
+.steps {
+  background-color: #6a558a;
+  border-radius: 20px;
+  color: white;
+  padding: 4rem 2rem;
+  margin: 2rem;
+}
+
+.step-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-box h2 {
+  font-size: clamp(2rem, 5vw, 6rem);
+  margin-bottom: 2rem;
+}
+
+.step-box h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 1.5rem;
+}
+
+.step-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.step-text-box :last-child{
+  border:none
+}
+
+/* About Me Section */
+.about-me {
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me h2:before {
+  content: '';
+  height: 2px;
+  width: 25%;
+  margin-right: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.about-me h2::after {
+  content: '';
+  height: 2px;
+  width: 25%;
+  margin-left: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.about-me h2{
+  width: 100%;
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.about-content .text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-content .text h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: bold;
+}
+
+.about-content .text p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-top: 2rem;
+}
+
+.about-content img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact h2:before {
+  content: '';
+  height: 2px;
+  width: 25%;
+  margin-right: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.contact h2::after {
+  content: '';
+  height: 2px;
+  width: 25%;
+  margin-left: 30px;
+
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.contact h2{
+  width: 100%;
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Modal Responsivo */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+#modal-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+#modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#modal-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Gallery button styles */
+.project-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-btn:hover {
+  transform: scale(1.05);
+}
+
+.project-btn img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Menu Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 8rem 1rem 2rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding: 6rem 2rem;
+    transition: right 0.3s ease;
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .steps {
+    margin: 1rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 3rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem 2rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+  }
+
+  .showcase h2,
+  .my-work h2,
+  .about-me h2,
+  .contact h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    padding: 1rem;
+  }
+
+  .showcase h2:before,
+  .showcase h2:after,
+  .about-me h2:before,
+  .about-me h2:after,
+  .contact h2:before,
+  .contact h2:after {
+    width: 20%;
+    margin: 0 15px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .steps {
+    margin: 0.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .step-box h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .step-box h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-content .text {
+    min-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about-content .text h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .about-content img {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .contact-content {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .contact-content .info {
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    width: 95%;
+    margin: 10% auto;
+  }
+
+  #modal-image {
+    max-height: 250px;
+  }
+
+  #modal-title {
+    font-size: 1.2rem;
+  }
+
+  #modal-description {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
